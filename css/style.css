@@ -1,13 +1,13 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
 nav {
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
-  padding-left: 6%;
-  padding-right: 6%;
-  padding-bottom: 10px;
-  position: sticky;
   top: 0;
 }
 
@@ -21,8 +21,8 @@ nav {
   float: left;
   flex-wrap: wrap;
   text-wrap: revert;
-  padding-top: 10px;
-  padding-left: 0;
+  padding-left: 105px;
+  padding-right: 105px;
 }
 .nav1 ul li {
   list-style-type: none;
@@ -57,24 +57,27 @@ nav {
   margin: 0;
   flex-wrap: wrap;
   text-wrap: revert;
-  padding-top: 10px;
-  padding-left: 0;
   align-items: center;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-right: 105px;
+  margin-left: 105px;
 }
 .nav2 ul li {
   list-style-type: none;
   display: inline-block;
-  padding: 10px 50px;
+  padding-left: 42px;
+  padding-right: 42px;
 }
 .nav2 ul li a .upper {
   color: #000;
   text-decoration: none;
   font-family: Roboto Condensed, sans-serif;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 400;
   text-transform: uppercase;
   display: inline-block;
 }
@@ -110,46 +113,308 @@ nav {
   text-transform: lowercase;
   display: inline-block;
 }
-
-h1 {
-  font-size: 42px;
-  font-family: Roboto, sans-serif;
-  font-weight: bold;
-  color: #303030;
+.nav2 ul li::after {
+  content: "";
+  width: 1px;
+  height: 62px;
+  background-color: #888787;
+  margin-top: 37px;
+  margin-bottom: 57px;
 }
 
-h3 {
-  font-size: 28px;
-  font-family: Inter, sans-serif;
-  color: #474747;
-  font-weight: normal;
+.logo {
+  margin-top: 17px;
+  margin-bottom: 14px;
 }
 
-h4 {
-  font-size: 14px;
+.image {
+  display: flex;
+  position: relative;
+}
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fixed {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+}
+
+button {
+  background-color: #BF0F0F;
+  color: #fff;
+  padding: 0px 16px 0px 16px;
+  font-size: 16px;
   font-family: Roboto, sans-serif;
-  color: #474747;
-  font-weight: normal;
-  line-height: 22.4px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: none;
+  margin: 15px 16px 15px 16px;
+  padding: 16px;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 73px;
+  margin-bottom: 70px;
 }
-
-.rbox, .lbox {
+.container .rbox, .container .lbox {
   flex: 1;
   display: flex;
   flex-direction: column;
   text-align: justify;
 }
-
-.lbox {
+.container .lbox {
   display: inline;
   align-items: left;
 }
-
-.rbox {
+.container .rbox {
   display: inline;
+}
+.container .rbox h1 {
+  font-size: 42px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  color: #303030;
+}
+.container .rbox h1::after {
+  content: "";
+  width: 137px;
+  height: 6px;
+  display: block;
+  margin-top: 22px;
+  margin-bottom: 27px;
+  background-color: #BF0F0F;
+}
+.container .rbox h2 {
+  font-size: 28px;
+  font-family: Inter, sans-serif;
+  color: #474747;
+  font-weight: 400;
+}
+.container .rbox h2::after {
+  content: "";
+  display: block;
+  width: 524px;
+  height: 3px;
+  background-color: #C4C4C4;
+  margin-top: 37px;
+  margin-bottom: 57px;
+}
+.container .rbox h4 {
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  color: #474747;
+  font-weight: 400;
+  line-height: 22.4px;
+}
+
+.image-container {
+  background-image: url(/Frontend/Frontend-praksa-Arpad/img/Placeholder.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  height: 502px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.image-container .centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  background: rgba(49, 56, 64, 0.4705882353);
+  padding-top: 215px;
+  padding-bottom: 215px;
+  padding-left: 600;
+  padding-right: 600;
+  letter-spacing: 10px;
+}
+
+.container3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 74px;
+  margin-left: 104px;
+  margin-right: 104px;
+}
+.container3 .cbox {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.container3 .lbox {
+  position: relative;
+}
+.container3 .lbox img {
+  display: block;
+}
+.container3 .lbox .cover {
+  position: absolute;
+  bottom: 122px;
+}
+.container3 h3 {
+  font-size: 24px;
+  font-family: Roboto, sans-serif;
+  color: #474747;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.container3 h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #BF0F0F;
+  margin-top: 11px;
+  margin-bottom: 57px;
+}
+
+.title {
+  position: relative;
+  text-align: center;
+}
+.title h1 {
+  font-size: 42px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  color: #303030;
+  margin-bottom: 17px;
+}
+.title h2 {
+  font-size: 28px;
+  font-family: Inter, sans-serif;
+  color: #474747;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.nums {
+  width: 100%;
+  background-image: url(/Frontend/Frontend-praksa-Arpad/img/nums.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.nums .h1 {
+  font-size: 46px;
+  font-family: Inter, sans-serif;
+  font-weight: 900;
+  color: #fff;
+}
+.nums h1 {
+  font-size: 46px;
+  font-family: Inter, sans-serif;
+  font-weight: 900;
+  color: #fff;
+  margin-top: 142px;
+  margin-bottom: 3px;
+}
+.nums sup {
+  font-size: 15px;
+  font-family: Inter, sans-serif;
+  font-weight: 900;
+  vertical-align: middle;
+}
+.nums sub {
+  font-size: 18px;
+  font-family: Inter, sans-serif;
+  font-weight: 900;
+  vertical-align: baseline;
+}
+.nums h4 {
+  font-size: 18px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 3px;
+  margin-bottom: 129px;
+}
+.nums .container4 {
+  display: flex;
+  justify-content: center;
+  margin-top: 74px;
+  margin-left: 104px;
+  margin-right: 104px;
+}
+.nums .box4, .nums .box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+.nums .box:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 120px;
+  height: 152px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.silver {
+  background-color: #F4F4F4;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.silver h2 {
+  font-size: 28px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  color: #474747;
+  margin-top: 92px;
+}
+.silver img {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.silver h4 {
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  color: #474747;
+  padding-bottom: 60px;
+  margin: 0px;
+}
+.silver .container5 {
+  display: flex;
+  justify-content: center;
+}
+.silver .box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+.silver .text {
+  font-size: 24px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.silver .text::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #BF0F0F;
+  margin-top: 11px;
+  margin-bottom: 57px;
 }
