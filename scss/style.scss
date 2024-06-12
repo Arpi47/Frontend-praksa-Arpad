@@ -2,6 +2,10 @@ body {
   padding: 0px;
   margin: 0px;
 }
+body.night{
+  background-color: #000;
+  color: #fff;
+}
 nav{
   width: 100%;
   display: flex;
@@ -45,6 +49,13 @@ nav{
     }
   }
 }
+body.night .nav1 {
+  background-color: #353232;
+  color: #fff;
+  a{
+    color: #aaaaaa;
+  }
+}
 .nav2{
   display: flex;
   justify-content: center; 
@@ -61,13 +72,33 @@ nav{
     padding-right: 25px;
     margin-right: 105px;
     margin-left: 105px;
-    li{
+    li {
       list-style-type: none;
       display: inline-block;
       padding-left: 42px;
       padding-right: 42px;
+      position: relative;
+
+      &:first-child::before {
+        content: "";
+        position: absolute;
+        left: -21px; // Padding figyelembevétele
+        top: -11px;
+        height: 160%;
+        width: 1px;
+        background-color: #88878766;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -11px;
+        height: 160%;
+        width: 1px;
+        background-color: #88878766;
+      }
       a {
-        .upper{
+        .upper {
           color: #000;
           text-decoration: none;
           font-family: Roboto Condensed, sans-serif;
@@ -76,7 +107,7 @@ nav{
           text-transform: uppercase;
           display: inline-block;
         }
-        .lower{
+        .lower {
           color: #474747;
           text-decoration: none;
           font-family: Roboto, sans-serif;
@@ -86,41 +117,42 @@ nav{
         }
       }
       a:hover {
-        .upper{
-          color:  #474747;
-          transition: .3s;
+        .upper {
+          color: #474747;
+          transition: 0.3s;
           text-transform: uppercase;
           display: inline-block;
         }
-        .lower{
-          color:  #474747;
-          transition: .3s;
+        .lower {
+          color: #474747;
+          transition: 0.3s;
           text-transform: lowercase;
           display: inline-block;
         }
       }
       a:active {
-        .upper{
-          color:  #474747;
-          transition: .3s;
+        .upper {
+          color: #474747;
+          transition: 0.3s;
           text-transform: uppercase;
           display: inline-block;
         }
-        .lower{
-          color:  #474747;
-          transition: .3s;
+        .lower {
+          color: #474747;
+          transition: 0.3s;
           text-transform: lowercase;
           display: inline-block;
         }
-      } 
+      }
     }
-    li::after {
-      content: "";
-      width: 1px;
-      height: 62px;
-      background-color: #888787;
-      margin-top: 37px;
-      margin-bottom: 57px;
+  }
+}
+body.night .nav2 {
+  background-color: #000;
+  color: #fff;
+  a {
+    .upper {
+      color: #888888;
     }
   }
 }
@@ -141,6 +173,7 @@ nav{
   position: absolute;
   bottom: 50px;
   left: 50%;
+  cursor: pointer;
 }
 button {
   background-color: #BF0F0F;
@@ -153,12 +186,20 @@ button {
   border: none;
   margin: 15px 16px 15px 16px;
   padding: 16px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #474747;
+  color: #ffffff;
+  transition: .3s;
+  text-decoration: none;
 }
 .container{
   display: flex;
   flex-wrap: wrap;
-  margin-top: 73px;
-  margin-bottom: 70px;
+  padding-top: 73px;
+  padding-bottom: 70px;
+  background-color: #F4F4F4;
   .rbox, .lbox{
     flex: 1;
     display: flex;
@@ -206,11 +247,23 @@ button {
       font-family: Roboto, sans-serif;
       color: #474747;
       font-weight: 400;
-      line-height: 22.4px;
+      line-height: 22px;
     }
   }
 }
-
+body.night .container {
+  background-color: #000;
+  color: #fff;
+  h1{
+    color: #9f9f9f;
+  }
+  h2{
+    color: #888888;
+  }
+  h4{
+    color: #888888;
+  }
+}
 .image-container {
   background-image: url(/Frontend/Frontend-praksa-Arpad/img/Placeholder.png);
   background-size: cover;
@@ -220,28 +273,26 @@ button {
   height: 502px;
   overflow-y: auto;
   position: relative;
+  .centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+    font-family: Roboto, sans-serif;
+    text-transform: uppercase;
+    background: #31384078;
+    padding-top: 215px;
+    padding-bottom: 215px;
+    padding-left: 600;
+    padding-right: 600;
+    letter-spacing: 10px;
+  }
 }
-
-.image-container .centered-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 32px;
-  text-align: center;
-  font-weight: 700;
-  font-family: Roboto, sans-serif;
-  text-transform: uppercase;
-  background: #31384078;
-  padding-top: 215px;
-  padding-bottom: 215px;
-  padding-left: 600;
-  padding-right: 600;
-  letter-spacing: 10px;
-}
-
 .container3 {
   display: flex;
   justify-content: center; 
@@ -279,6 +330,13 @@ button {
     margin-bottom: 57px;
   }
 }
+body.night .container3 {
+  background-color: #000;
+  color: #fff;
+  h3{
+    color: #888888;
+  }
+}
 .title {
   position: relative;
   text-align: center; 
@@ -296,13 +354,30 @@ button {
     font-weight: 400;
     margin-bottom: 32px;
   }
+  img {
+    margin-bottom: 93px;
+  }
+}
+body.night .title {
+  background-color: #000;
+  color: #fff;
+  h1{
+    color: #9f9f9f;
+  }
+  h2{
+    color: #888888;
+  }
 }
 .nums {
   width: 100%;
   background-image: url(/Frontend/Frontend-praksa-Arpad/img/nums.png);
-  background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
+  width: 100%;
+  height: 502px;
+  overflow-y: auto;
+  position: relative;
   .h1{
     font-size: 46px;
     font-family: Inter, sans-serif;
@@ -366,13 +441,20 @@ button {
   background-size: cover;
   width: 100%;
   position: relative;
-  text-align: center; 
+  text-align: center;
+  padding-top: 1px;
+  padding-bottom: 90px;
+  .dimage {
+    position: absolute;
+    left: 6px;
+    bottom: -28px;
+  }
   h2 {
     font-size: 28px;
     font-family: Inter, sans-serif;
     font-weight: 400;
     color: #474747;
-    margin-top: 92px;
+    padding-top: 91px;
   }
   img {
     padding-top: 60px;
@@ -389,27 +471,363 @@ button {
   .container5 {
     display: flex;
     justify-content: center; 
+    width: 85%;
+    position: relative;
+    margin-left: 7%;
   }
   .box {
     flex: 1;
     display: flex;
     flex-direction: column;
-    text-align: center;
     position: relative;
+    margin-left: 8px;
+    margin-right: 8px;
+    height: auto;
+    img{
+      display: block;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    .text{
+      position: absolute;
+      top: 270px;
+      left: 26px;
+      font-size: 24px;
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: left;
+      color: #474747;
+    }
+    .text::after {
+      content: "";
+      display: block;
+      width: 53px;
+      height: 2px;
+      background-color: #BF0F0F;
+      margin-top: 11px;
+      margin-bottom: 57px;
+    }
+    p{
+      margin: 0px;
+    }
+    .text2{
+      position: absolute;
+      top: 270px;
+      left: 26px;
+      font-size: 24px;
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: left;
+      color: #474747;
+    }
+    .text2::after {
+      content: "";
+      display: block;
+      width: 53px;
+      height: 2px;
+      background-color: #BF0F0F;
+      margin-top: 3px;
+      margin-bottom: 57px;
+    }
+  }  
+}
+body.night .silver {
+  background-color: #161616;
+  h2{
+    color: #888888;
   }
-  .text {
-    font-size: 24px;
-    font-family: Roboto, sans-serif;
+  h4{
+    color: #888888;
+  }
+}
+.last {
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-bottom: 75px;
+  img {
+    padding-top: 44px;
+    padding-bottom: 37px;
+  }
+  h2 {
+    font-family: Inter, sans-serif;
     font-weight: 400;
-    text-transform: uppercase;
+    font-size: 28px;
+    color: #474747;
+    margin-top: 83px;
   }
-  .text::after {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 2px;
-    background-color: #BF0F0F;
-    margin-top: 11px;
-    margin-bottom: 57px;
+  .container6 {
+    display: flex;
+    justify-content: center; 
+    width: 80%;
+    position: relative;
+    margin-left: 10%;
+    margin-bottom: 75px;
   }
+  .box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 37px;
+    margin-right: 37px;
+    height: auto;
+    img{
+      display: block;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    p{
+      margin-top: 12px;
+      font-size: 18px;
+      font-family: Inter, sans-serif;
+      font-weight: 400;
+      text-align: center;
+      color: 474747;
+    }
+  }  
+}
+body.night .last {
+  background-color: #000;
+  color: #888;
+  h2{
+    color: #888888;
+  }
+  h2{
+    color: #888888;
+  }
+}
+.footer {
+  width: 100%;
+  background-image: url(/Frontend/Frontend-praksa-Arpad/img/footer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  .sat {
+    background: #393D4399;
+    .logof {
+      position: absolute;
+      top: 67px;
+      left: 214px;
+    }
+    h1{
+      font-size: 28px;
+      font-family: Inter, sans-serif;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 86px;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+    }
+    h4{
+      font-size: 14px;
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      color: #fff;
+      margin-top: 3px;
+      margin-bottom: 129px;
+    }
+    .container7 {
+      display: flex;
+      justify-content: center; 
+      margin-top: 74px;
+      margin-left: 104px;
+      margin-right: 104px;
+    }
+    .box4, .box {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+    }
+    .box:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 120px;
+      height: 152px;
+      width: 1px;
+      background-color: #FFFFFF33;
+    }
+    .containerf {
+      flex-wrap: wrap;
+      display: flex;
+      .rbox, .lbox{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+      }
+      .lbox{
+        display: inline-block;
+        padding-top: 25px;
+        align-items: left;
+        text-align: center;
+      }
+      .rbox{
+        display: inline;
+        font-size: 14px;
+        font-family: Roboto, sans-serif;
+        font-weight: 400;
+        color: #fff;
+        line-height: 22px;
+        a {
+          font-size: 14px;
+          font-family: Roboto, sans-serif;
+          font-weight: 400;
+          color: #fff;
+        }
+        a:active{
+          color: #BF0F0F;
+          transition: .3s;
+          text-decoration: none;
+        }
+        a:hover{
+          color: #BF0F0F;
+          transition: .3s;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .sat2 {
+    background: #00000054;
+    .fcontainer {
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      .box1 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        padding-left: 65px;
+        white-space: nowrap;
+        p {
+          font-size: 14px;
+          font-family: Roboto, sans-serif;
+          font-weight: 400;
+          color: #FFFFFF4D;
+        }
+      }
+      .box2 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        padding-left: 153px;
+        a{
+          color: #595959;
+          text-decoration: none;
+          font-weight: bold;
+          font-family: Roboto, sans-serif;
+          font-size: 14px;
+          text-decoration-line: underline;
+        }
+        a:active{
+          color: #888787;
+          transition: .3s;
+          text-decoration: none;
+        }
+        a:hover{
+          color: #888787;
+          transition: .3s;
+          text-decoration: none;
+        }
+      }
+      .box3 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        padding-left: 57px;
+        a{
+          color: #595959;
+          text-decoration: none;
+          font-weight: bold;
+          font-family: Roboto, sans-serif;
+          font-size: 14px;
+          text-decoration-line: underline;
+        }
+        a:active{
+          color: #888787;
+          transition: .3s;
+          text-decoration: none;
+        }
+        a:hover{
+          color: #888787;
+          transition: .3s;
+          text-decoration: none;
+        }
+      }
+      .box4 {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        position: relative;
+        padding-left: 252px;
+        padding-right: 25px;
+        p {
+          font-size: 14px;
+          font-family: Roboto, sans-serif;
+          font-weight: 400;
+          color: #FFFFFF4D;
+        }
+        a{
+          color: #595959;
+          text-decoration: none;
+          font-weight: bold;
+          font-family: Roboto, sans-serif;
+          font-size: 14px;
+          text-decoration-line: underline;
+        }
+        a:active{
+          color: #888787;
+          transition: .3s;
+          text-decoration: none;
+        }
+        a:hover{
+          color: #888787;
+          transition: .3s;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+label {
+  position: absolute;
+  width: 45px;
+  height: 22px;
+  right: 20px;
+  top: 20px;
+  border: 2px solid;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: border-color 0.4s;
+}
+
+label:before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  left: 1px;
+  top: 1px;
+  border-radius: 50%;
+  background: #353232;
+  transition: 0.4s;
+}
+
+label.active:before {
+  left: 24px;
+  background: #fff;
 }
