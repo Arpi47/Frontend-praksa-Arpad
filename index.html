@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <title>Praksa</title>
 </head>
 <body>
     <nav class="nav1">
         <ul>
-            <li class="logo"><img src="img/logo.png" alt="logo"></li>
+            <li class="logo"><img src="/img/logo.png" alt="logo"></li>
         </ul>
         <ul>
             <li><a href="index.html">Srpski</a></li>
@@ -50,19 +51,41 @@
             </li>
         </ul>
     </nav>
-    <div class="image">
-        <img src="img/Video.png" alt="vid">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/img/slide.png" alt="s1">
+            </div>
+            <div class="swiper-slide">
+                <img src="/img/slide.png" alt="s2">
+            </div>
+            <div class="swiper-slide">
+                <img src="/img/slide.png" alt="s3">
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        <div class="autoplay-progress">
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span></span>
+        </div>
+        <div class="sat"></div>
         <div class="fixed">
-            <svg width="58" height="57" viewBox="0 0 58 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M29 52.25C42.1168 52.25 52.75 41.6168 52.75 28.5C52.75 15.3832 42.1168 4.75 29 4.75C15.8832 4.75 5.25 15.3832 5.25 28.5C5.25 41.6168 15.8832 52.25 29 52.25Z" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M19.5 28.5L29 38L38.5 28.5" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M29 19V38" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>                
+            <a href="#dvg">
+                <svg width="58" height="57" viewBox="0 0 58 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M29 52.25C42.1168 52.25 52.75 41.6168 52.75 28.5C52.75 15.3832 42.1168 4.75 29 4.75C15.8832 4.75 5.25 15.3832 5.25 28.5C5.25 41.6168 15.8832 52.25 29 52.25Z" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.5 28.5L29 38L38.5 28.5" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M29 19V38" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>  
+            </a>               
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="dvg">
         <div class="lbox">
-            <img src="img/image1.png" alt="i1">
+            <img src="/img/image1.png" alt="i1">
         </div>
         <div class="rbox">
             <h1>DVG Company</h1>
@@ -78,20 +101,19 @@
     </div>
     <div class="image-container">
         <div class="centered-text-container">
-            <div class="centered-text">pouzdana distribucija<br><img src="img/Rectangle2.png" alt="red1"></div>
+            <div class="centered-text">pouzdana distribucija<br><img src="/img/Rectangle2.png" alt="red1"></div>
         </div>
     </div>
+
     <div class="container3">
-        <div data-aos="fade-right">
-            <img src="img/img1.png" alt="1">
-            <h3>postanine naš partner</h3>
+         <div data-aos="fade-up-right" data-aos-duration="1000">
+            <img src="/img/img1.png" alt="1"><h3>postanine naš partner</h3>
+        </div> 
+        <div class="cbox" data-aos="fade-up" data-aos-duration="1000">
+            <img src="/img/img2.png" alt="2"><h3>naši proizvodi</h3>
         </div>
-        <div class="cbox"  data-aos="fade-up">
-            <img src="img/img2.png" alt="2">
-            <h3>naši proizvodi</h3>
-        </div>
-        <div class="lbox" data-aos="fade-left">
-            <img src="img/img3.png" alt="3">
+        <div class="lbox" data-aos="fade-up-left" data-aos-duration="1000">
+            <img src="/img/img3.png" alt="3">
             <div class="cover">
                 <svg width="401" height="12" viewBox="0 0 401 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="401" height="12" fill="#BF0F0F"/>
@@ -103,7 +125,7 @@
     <div class="title">
         <h1>DVG Company</h1>
         <h2>u brojkama</h2>
-        <img src="img/Rectangle2.png" alt="red2">
+        <img src="/img/Rectangle2.png" alt="red2">
     </div>
     <div class="nums">
         <div class="container4">
@@ -127,38 +149,38 @@
     </div>
     <div class="silver">
         <h2>Naši proizvodi</h2>
-        <img src="/Frontend/Frontend-praksa-Arpad/img/Rectangle3.png" alt="grect">
+        <img src="/img/Rectangle3.png" alt="grect">
         <h4>Naše proizvode DVG Cosmetics odlikuje visok kvalitet kojim se dobija kompletna<br>
             nega lica I tela. Uspeli smo da uskladimo kvalitet i cenu, što su prepoznali i našI<br>
             kupci.
         </h4>
         <div class="container5">
             <div class="box" data-aos="fade-up" data-aos-duration="1500">
-                <img src="/Frontend/Frontend-praksa-Arpad/img/2img1.png" alt="2_1">
+                <img src="/img/2img1.png" alt="2_1">
                 <div class="text">
                     <p>kese i folije</p>
                 </div>
             </div>
             <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                <img src="/Frontend/Frontend-praksa-Arpad/img/2img2.png" alt="2_2">
+                <img src="/img/2img2.png" alt="2_2">
                 <div class="text">
                     <p>za kuhinju</p>
                 </div>
             </div>
             <div class="box" data-aos="fade-up" data-aos-duration="500">
-                <img src="/Frontend/Frontend-praksa-Arpad/img/2img3.png" alt="2_3">
+                <img src="/img/2img3.png" alt="2_3">
                 <div class="text2">
                     <p>ubrusi i<br>toalet papiri</p>
                 </div>
             </div>
             <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                <img src="/Frontend/Frontend-praksa-Arpad/img/2img4.png" alt="2_4">
+                <img src="/img/2img4.png" alt="2_4">
                 <div class="text">
                     <p>kozmetika</p>
                 </div>
             </div>
             <div class="box" data-aos="fade-up" data-aos-duration="1500">
-                <img src="/Frontend/Frontend-praksa-Arpad/img/2img5.png" alt="2_5">
+                <img src="/img/2img5.png" alt="2_5">
                 <div class="text2">
                     <p>plastične<br>kante</p>
                 </div>
@@ -174,40 +196,40 @@
     </div>
     <div class="last">
         <h2>Istaknuti brendovi za koje radimo<br>distribuciju</h2>
-        <img src="/Frontend/Frontend-praksa-Arpad/img/Rectangle4.png" alt="stripe">
+        <img src="/img/Rectangle4.png" alt="stripe">
         <div class="container6">
             <div class="box" data-aos="fade-right" data-aos-duration="1500">
-                <img src="/Frontend/Frontend-praksa-Arpad/img/dove.png" alt="l1">
+                <img src="/img/dove.png" alt="l1">
                 <div>
                     <p>Dove</p>
                 </div>
             </div>
             <div class="box" data-aos="fade-right" data-aos-duration="1000">
-                <img src="/Frontend/Frontend-praksa-Arpad/img/nivea.png" alt="l2">
+                <img src="/img/nivea.png" alt="l2">
                 <div>
                     <p>Nivea</p>
                 </div>
             </div>
             <div class="box" data-aos="fade-right" data-aos-duration="500">
-                <img src="/Frontend/Frontend-praksa-Arpad/img/palmolive.png" alt="l3">
+                <img src="/img/palmolive.png" alt="l3">
                 <div>
                     <p>Palmolive</p>
                 </div>
             </div>
             <div class="box" data-aos="fade-left" data-aos-duration="500">
-                <img src="/Frontend/Frontend-praksa-Arpad/img/vanish.png" alt="l4">
+                <img src="/img/vanish.png" alt="l4">
                 <div>
                     <p>Vanish</p>
                 </div>
             </div>
             <div class="box" data-aos="fade-left" data-aos-duration="1000">
-                <img src="/Frontend/Frontend-praksa-Arpad/img/ajax.png" alt="l5">
+                <img src="/img/ajax.png" alt="l5">
                 <div>
                     <p>Ajax</p>
                 </div>
             </div>
             <div class="box" data-aos="fade-left" data-aos-duration="1500">
-                <img src="/Frontend/Frontend-praksa-Arpad/img/cif.png" alt="l6">
+                <img src="/img/cif.png" alt="l6">
                 <div>
                     <p>Cif</p>
                 </div>
@@ -231,45 +253,70 @@
             document.querySelector('.nav1', '.nav2', '.container-5', '.column-white', '.oprema-text', '.ct-6-text', '.ct-5-text').classList.toggle('night');
         })
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="swiper.js"></script>
 
 
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            <h2>Welcome to Our Website!</h2>
+            <p>We're glad you're here. Enjoy your stay and explore our amazing content.</p>
+            <button id="popup-button">Close</button>
+        </div>
+    </div>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.getElementById('popup').style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }, 5000);
+            document.getElementById('close-popup').addEventListener('click', function() {
+                document.getElementById('popup').style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            document.getElementById('popup-button').addEventListener('click', function() {
+                document.getElementById('popup').style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
 
     <div class="footer">
-        <div class="sat">
-            <div class="container7">
-                <div class="box">
-                    <img class="logof" src="/Frontend/Frontend-praksa-Arpad/img/ilogo.png" alt="logof">
-                </div>
-                <div class="box">
-                    <h1>d.v.g. company</h1>
-                    <div class="containerf">
-                        <div class="lbox">
-                            <div>
-                                <img src="/Frontend/Frontend-praksa-Arpad/img/loc.png" alt="loc"><br><br>
-                                <img src="/Frontend/Frontend-praksa-Arpad/img/tel.png" alt="tel"><br><br>
-                                <img src="/Frontend/Frontend-praksa-Arpad/img/mail.png"alt="mail">
-                            </div>
-                        </div>
-                        <div class="rbox">
-                            <p>Čantavirski put bb<br>
-                                24000 Subotica, Srbija</p>
-                            <a href="index.html">+381 24 568 555</a>
-                            <a href="index.html">office@dvgcomapny.com</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <span><h1>8</h1></span>
-                    <span><h4>Komercialista</h4></span>
-                </div>
-                <div class="box4">
-                    <span><h1>170</h1></span>
-                    <span><h4>Brendova</h4></span>
-                </div>
+        <footer>
+            <div class="footer-section logo">
+                <img src="/img/ilogo.png" alt="Logo">
             </div>
-        </div>
+            <div class="footer-section contact">
+                <h1>D.V.G. COMPANY</h1>
+                <p><img src="/img/loc.png" alt="Cím ikon"> Čantavirski put bb 24000 Subotica, Srbija</p>
+                <p><img src="/img/tel.png" alt="Telefon ikon"> +381 24 568 555</p>
+                <p><img src="/img/mail.png" alt="Email ikon"> office@dvgcomapny.com</p>
+            </div>
+            <div class="footer-section links">
+                <ul>
+                    <li><a href="#">O NAMA</a></li>
+                    <li><a href="#">DVG PROIZVODI</a></li>
+                    <li><a href="#">BRENDOVI</a></li>
+                    <li><a href="#">DISTRIBUCIJA</a></li>
+                    <li><a href="#">SARADNJA</a></li>
+                    <li><a href="#">NOVOSTI</a></li>
+                    <li><a href="#">KONTAKT</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <p>Pratite nas:</p>
+                <a href="#"><img src="/img/facebook.png" alt="FB"></a>
+                <a href="#"><img src="/img/twitter.png" alt="X"></a>
+                <a href="#"><img src="/img/yt.png" alt="YT"></a>
+                <a href="#"><img src="/img/msg.png" alt="MSG"></a>
+            </div>
+        </footer>
         <div class="sat2">
             <div class="fcontainer">
                 <div class="box1">
@@ -287,9 +334,6 @@
             </div>
         </div>
     </div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    
 </body>
 </html>
