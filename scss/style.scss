@@ -1,35 +1,34 @@
 body {
   padding: 0px;
-  margin: 0px;
+  margin: 0 auto;
 }
 body.night{
   background-color: #000;
   color: #fff;
 }
 nav{
-  width: 100%;
+  max-width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  top: 0;
+  margin: 0 auto;
 }
-.nav1{
+.nav1 {
   background-color: #D9D9D9;
-  ul{
+  position: relative;
+  ul {
     list-style: none;
-    margin: 0;
     display: flex;
-    float: left;
     flex-wrap: wrap;
     text-wrap: revert;
-    padding-left: 105px;
-    padding-right: 105px;
-    li{
+    padding: 0 105px;
+    margin: 0;
+    li {
       list-style-type: none;
       display: inline-block;
-      padding: 10px 20px;
-      a{
+      padding-right: 16px;
+      a {
         color: #595959;
         text-decoration: none;
         font-weight: 400;
@@ -37,55 +36,139 @@ nav{
         font-size: 14px;
         text-decoration-line: underline;
       }
-      a:active{
+      a:active {
         color: #888787;
-        transition: .3s;
+        transition: 0.3s;
         text-decoration: none;
       }
-      a:hover{
+      a:hover {
         color: #888787;
-        transition: .3s;
+        transition: 0.3s;
         text-decoration: none;
       }
+    }
+  }
+  .norm {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-wrap: revert;
+    padding: 0 105px;
+    margin: 0;
+    li {
+      list-style-type: none;
+      display: inline-block;
+      padding-right: 16px;
+      a {
+        color: #595959;
+        text-decoration: none;
+        font-weight: 400;
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        text-decoration-line: underline;
+      }
+      a:active {
+        color: #888787;
+        transition: 0.3s;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #888787;
+        transition: 0.3s;
+        text-decoration: none;
+      }
+    }
+  }
+  .menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 120px;
+    top: 18px;
+    z-index: 999;
+  }
+  .language-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #dddddd;
+    position: absolute;
+    top: 70px;
+    right: 60px;
+    z-index: 998;
+    width: auto;
+    max-width: 100%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 0 50px 0 50px;
+    li {
+      display: block;
+      width: 100%;
+      padding: 15px 0;
+      border-bottom: 1px solid #88878766;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    &.open {
+      display: flex;
+    }
+  }
+  @media (min-width: 768px) {
+    .menu-icon {
+      display: none;
+    }
+    .language-menu {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+    .language-menu {
+      display: none;
+    }
+    .norm {
+      display: none;
     }
   }
 }
 body.night .nav1 {
   background-color: #353232;
   color: #fff;
-  a{
-    color: #aaaaaa;
+  a {
+    color: #ffffff;
+  }
+  .language-menu {
+    background-color: #505050;
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.1);
   }
 }
 .nav2{
   display: flex;
   justify-content: center; 
+  margin: 0 auto;
+  max-width: 100%;
   ul{
     list-style: none;
-    margin: 0;
-    flex-wrap: wrap;
     text-wrap: revert;
-    align-items: center;
     text-align: center;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin-right: 105px;
-    margin-left: 105px;
+    padding: 12px 0 12px 0;
+    margin: 0;
     li {
       list-style-type: none;
       display: inline-block;
-      padding-left: 42px;
-      padding-right: 42px;
+      padding: 0 42px 0 42px;
       position: relative;
-
       &:first-child::before {
         content: "";
         position: absolute;
-        left: -21px; // Padding figyelembevétele
-        top: -11px;
-        height: 160%;
+        left: -5px;
+        top: -12px;
+        height: 62px;
         width: 1px;
         background-color: #88878766;
       }
@@ -93,8 +176,8 @@ body.night .nav1 {
         content: "";
         position: absolute;
         right: 0;
-        top: -11px;
-        height: 160%;
+        top: -12px;
+        height: 62px;
         width: 1px;
         background-color: #88878766;
       }
@@ -147,21 +230,93 @@ body.night .nav1 {
       }
     }
   }
+  .micon {
+    display: none;
+    font-size: 50px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    z-index: 999;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #dddddd;
+    position: absolute;
+    top: 90px;
+    left: 50px;
+    z-index: 998;
+    width: auto;
+    max-width: 100%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 0 42px 0 42px;
+    li {
+      display: block;
+      width: 100%;
+      padding: 15px 0;
+      border-bottom: 1px solid #88878766;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    &.open {
+      display: flex;
+    }
+  }
+  @media (min-width: 768px) {
+    .micon {
+      display: none;
+    }
+    .menu {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .space {
+      width: 100%;
+      padding-top: 70px;
+    }
+    .micon {
+      display: block;
+    }
+    .menu {
+      display: none;
+    }
+    .nmenu {
+      display: none;
+    }
+    li::after {
+      display: none;
+    }
+    li::before {
+      display: none;
+    }
+
+  }
 }
 body.night .nav2 {
   background-color: #000;
   color: #fff;
-  a {
-    .upper {
-      color: #888888;
-    }
+  .upper {
+    color: #fff;
+  }
+  .lower {
+    color: #b7b7b7;
+  }
+  .menu {
+    background-color: #505050;
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.1);
   }
 }
-
 .swiper {
-  width: 100%;
-  max-height: 705px;
+  max-width: 100%;
+  padding: 352px 0 353px 0;
   position: relative;
+  margin: 0 auto;
   .sat {
     position: absolute;
     top: 0;
@@ -219,14 +374,12 @@ body.night .nav2 {
   transform: rotate(-90deg);
 }
 .logo {
-  margin-top: 17px;
-  margin-bottom: 14px;
+  padding: 17px 16px 14px 16px;
 }
 .image {
-  display: flex;
   position: relative;
   img{
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
   }
@@ -242,14 +395,12 @@ body.night .nav2 {
 button {
   background-color: #BF0F0F;
   color: #fff;
-  padding: 0px 16px 0px 16px;
+  padding: 16px;
   font-size: 16px;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   border-radius: 4px;
   border: none;
-  margin: 15px 16px 15px 16px;
-  padding: 16px;
   cursor: pointer;
 }
 button:hover{
@@ -263,39 +414,35 @@ button:hover{
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 73px;
-  padding-bottom: 70px;
+  padding: 73px 0 70px 0;
   background-color: #F4F4F4;
   .rbox, .lbox{
-    flex: 1;
     display: flex;
-    flex-direction: column;
     text-align: justify;
   }
   .lbox{
     display: inline;
-    align-items: left;
     img {
-      max-width: 710px;
-      max-height: 504px;
+      max-width: 100%;
       height: auto;
     }
   }
   .rbox{
     display: inline;
+    padding-left: 55px;
     h1{
       font-size: 42px;
       font-family: Roboto, sans-serif;
       font-weight: 700;
       color: #303030;
+      margin: 0;
     }
     h1::after {
       content: "";
       width: 137px;
       height: 6px;
       display: block;
-      margin-top: 22px;
-      margin-bottom: 27px;
+      margin: 22px 0 27px 0;
       background-color: #BF0F0F;
     }
     h2{
@@ -303,6 +450,7 @@ button:hover{
       font-family: Inter, sans-serif;
       color: #474747;
       font-weight: 400;
+      margin: 0;
     }
     h2::after {
       content: "";
@@ -310,8 +458,7 @@ button:hover{
       width: 524px;
       height: 3px;
       background-color: #C4C4C4;
-      margin-top: 37px;
-      margin-bottom: 57px;
+      margin: 37px 0 57px 0;
     }
     h4{
       font-size: 14px;
@@ -319,6 +466,8 @@ button:hover{
       color: #474747;
       font-weight: 400;
       line-height: 22px;
+      margin: 0;
+      padding-bottom: 80px;
     }
   }
 }
@@ -340,10 +489,9 @@ body.night .container {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  width: 100%;
-  height: 502px;
-  overflow-y: auto;
+  max-width: 100%;
   position: relative;
+  padding: 251px 0 251px 0;
   .centered-text {
     position: absolute;
     top: 50%;
@@ -357,27 +505,21 @@ body.night .container {
     font-family: Roboto, sans-serif;
     text-transform: uppercase;
     background: #31384078;
-    padding-top: 215px;
-    padding-bottom: 215px;
-    padding-left: 600;
-    padding-right: 600;
+    padding: 215px 0 215px 0;
     letter-spacing: 10px;
   }
 }
 .container3 {
   display: flex;
   justify-content: center; 
-  padding-top: 74px;
-  padding-left: 104px;
-  padding-right: 104px;
+  padding: 74px 104px 0 104px;
   max-width: 100%;
   height: auto;
   img{
     display: block;
   }
   .cbox {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px 0 15px;
   }
   .lbox {
     position: relative;
@@ -399,8 +541,7 @@ body.night .container {
     width: 50px;
     height: 2px;
     background-color: #BF0F0F;
-    margin-top: 11px;
-    margin-bottom: 57px;
+    margin: 11px 0 57px 0;
   }
 }
 body.night .container3 {
@@ -413,22 +554,24 @@ body.night .container3 {
 .title {
   position: relative;
   text-align: center; 
+  padding-top: 28px;
   h1{
     font-size: 42px;
     font-family: Roboto, sans-serif;
     font-weight: 700;
     color: #303030;
-    margin-bottom: 17px;
+    margin: 0;
+    padding-bottom: 23px;
   }
   h2{
     font-size: 28px;
     font-family: Inter, sans-serif;
     color: #474747;
     font-weight: 400;
-    margin-bottom: 32px;
+    margin: 0;
   }
   img {
-    margin-bottom: 93px;
+    padding: 32px 0 93px 0;
   }
 }
 body.night .title {
@@ -443,13 +586,11 @@ body.night .title {
 }
 .nums {
   width: 100%;
+  max-height: 502px;
   background-image: url(/img/nums.png);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  width: 100%;
-  height: 502px;
-  overflow-y: auto;
   position: relative;
   .h1{
     font-size: 46px;
@@ -462,8 +603,8 @@ body.night .title {
     font-family: Inter, sans-serif;
     font-weight: 900;
     color: #fff;
-    margin-top: 142px;
-    margin-bottom: 3px;
+    padding: 142px 0 3px 0;
+    margin: 0;
   }
   sup {
     font-size: 15px;
@@ -482,15 +623,13 @@ body.night .title {
     font-family: Inter, sans-serif;
     font-weight: 400;
     color: #fff;
-    margin-top: 3px;
-    margin-bottom: 129px;
+    padding: 3px 0 129px 0;
+    margin: 0;
   }
   .container4 {
     display: flex;
     justify-content: center; 
-    margin-top: 74px;
-    margin-left: 104px;
-    margin-right: 104px;
+    padding: 0 100px 15px 100px;
   }
   .box4, .box {
     flex: 1;
@@ -515,8 +654,10 @@ body.night .title {
   width: 100%;
   position: relative;
   text-align: center;
-  padding-top: 1px;
-  padding-bottom: 90px;
+  padding: 1px 0 90px 0;
+  .line {
+    padding: 60px 0 60px 0;
+  }
   .dimage {
     position: absolute;
     left: 6px;
@@ -528,10 +669,7 @@ body.night .title {
     font-weight: 400;
     color: #474747;
     padding-top: 91px;
-  }
-  img {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    margin: 0;
   }
   h4 {
     font-size: 14px;
@@ -539,32 +677,29 @@ body.night .title {
     font-weight: 400;
     color: #474747;
     padding-bottom: 60px;
-    margin: 0px;
+    margin: 0;
   }
   .container5 {
     display: flex;
     justify-content: center; 
     width: 85%;
     position: relative;
-    margin-left: 7%;
+    padding-left: 8%;
   }
   .box {
     flex: 1;
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-left: 8px;
-    margin-right: 8px;
+    padding: 0 8px 0 8px;
     height: auto;
     img{
       display: block;
-      padding-top: 0px;
-      padding-bottom: 0px;
     }
     .text{
       position: absolute;
-      top: 270px;
-      left: 26px;
+      bottom: 0;
+      padding-left: 25px;
       font-size: 24px;
       font-family: Roboto, sans-serif;
       font-weight: 400;
@@ -578,16 +713,15 @@ body.night .title {
       width: 53px;
       height: 2px;
       background-color: #BF0F0F;
-      margin-top: 11px;
-      margin-bottom: 57px;
+      margin: 11px 0 51px 0;
     }
     p{
-      margin: 0px;
+      margin: 0;
     }
     .text2{
       position: absolute;
-      top: 270px;
-      left: 26px;
+      bottom: 0;
+      padding: 0 0 5px 25px;
       font-size: 24px;
       font-family: Roboto, sans-serif;
       font-weight: 400;
@@ -601,8 +735,7 @@ body.night .title {
       width: 53px;
       height: 2px;
       background-color: #BF0F0F;
-      margin-top: 3px;
-      margin-bottom: 57px;
+      margin: 3px 0 27px 0;
     }
   }  
 }
@@ -620,41 +753,39 @@ body.night .silver {
   width: 100%;
   position: relative;
   text-align: center;
-  margin-bottom: 75px;
+  padding-bottom: 75px;
   img {
-    padding-top: 44px;
-    padding-bottom: 37px;
+    padding: 44px 0 12px 0;
   }
   h2 {
     font-family: Inter, sans-serif;
     font-weight: 400;
     font-size: 28px;
     color: #474747;
-    margin-top: 83px;
+    padding-top: 83px;
+    margin: 0;
   }
   .container6 {
     display: flex;
     justify-content: center; 
     width: 80%;
     position: relative;
-    margin-left: 10%;
-    margin-bottom: 75px;
+    padding-left: 10%;
+    padding-bottom: 75px;
   }
   .box {
     flex: 1;
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-left: 37px;
-    margin-right: 37px;
+    padding: 0 37px 0 37px;
     height: auto;
     img{
       display: block;
-      padding-top: 0px;
-      padding-bottom: 0px;
     }
     p{
-      margin-top: 12px;
+      padding-top: 12px;
+      margin: 0;
       font-size: 18px;
       font-family: Inter, sans-serif;
       font-weight: 400;
@@ -693,7 +824,8 @@ body.night .last {
       font-family: Inter, sans-serif;
       font-weight: 700;
       color: #fff;
-      margin-bottom: 3px;
+      padding-bottom: 3px;
+      margin: 0;
     }
     p{
       font-size: 14px;
@@ -721,40 +853,36 @@ body.night .last {
     .footer-section {
       padding: 10px;
       box-sizing: border-box;
+    
     }
-    .footer-section.logo {
+    .logo {
       flex: 1;
     }
     .footer-section.contact {
       flex: 2;
       border-right: 1px solid #ccc;
       border-left: 1px solid #ccc;
-      padding-left: 20px;
-      padding-right: 20px;
+
     }
     .footer-section.links {
       flex: 2;
       border-right: 1px solid #ccc;
-      padding-left: 20px;
-      padding-right: 20px;
+
     }
     .footer-section.social {
       flex: 1;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding-left: 20px;
+
     }
     .footer-section img {
       vertical-align: middle;
-      margin-right: 10px;
+
     }
     .footer-section ul {
       list-style-type: none;
-      padding: 0;
-    }
-    .footer-section ul li {
-      margin: 5px 0;
+
     }
   } 
   .sat2 {
@@ -836,8 +964,7 @@ body.night .last {
         flex-direction: row;
         text-align: center;
         position: relative;
-        padding-left: 252px;
-        padding-right: 25px;
+        padding-left: 0 25px 0 252px;
         p {
           font-size: 14px;
           font-family: Roboto, sans-serif;
@@ -870,8 +997,8 @@ label {
   position: absolute;
   width: 45px;
   height: 22px;
-  right: 20px;
-  top: 20px;
+  right: 33px;
+  top: 27px;
   border: 2px solid;
   border-radius: 20px;
   cursor: pointer;
@@ -957,3 +1084,13 @@ body.night .popup {
     color: #aaaaaa;
   }
 }
+
+
+
+
+/*.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+padding: top; right; bottom; left;  
+*/

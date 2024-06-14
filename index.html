@@ -11,45 +11,46 @@
 <body>
     <nav class="nav1">
         <ul>
-            <li class="logo"><img src="/img/logo.png" alt="logo"></li>
+          <li class="logo"><img src="/img/logo.png" alt="logo"></li>
         </ul>
-        <ul>
+        <div class="menu-icon" onclick="toggleLanguageMenu()">&#9776;</div>
+        <ul class="language-menu">
             <li><a href="index.html">Srpski</a></li>
             <li><a href="index.html">English</a></li>
             <li><a href="index.html">Magyar</a></li>
         </ul>
-    </nav>
-    <nav class="nav2">
-        <ul>
-            <li><a href="index.html">
-                <span class="upper">o nama</span><br>
-                <span class="lower">vizija za uspeh</span></a>
-            </li>
-            <li><a href="index.html">
-                <span class="upper">dvg proizvodi</span><br>
-                <span class="lower">naši proizvodi</span></a>
-            </li>
-            <li><a href="index.html">
-                <span class="upper">brendovi</span><br>
-                <span class="lower">koje zasupamo</span></a>
-            </li>
-            <li><a href="index.html">
-                <span class="upper">distribucija</span><br>
-                <span class="lower">logistika i operativa</span></a>
-            </li>
-            <li><a href="index.html">
-                <span class="upper">saradnja</span><br>
-                <span class="lower">proširenje ponude</span></a>
-            </li>
-            <li><a href="index.html">
-                <span class="upper">novosti</span><br>
-                <span class="lower">aktuelnosti</span></a>
-            </li>
-            <li><a href="index.html">
-                <span class="upper">kontakt</span><br>
-                <span class="lower">kontaktirajte nas</span></a>
-            </li>
+        <ul class="norm">
+            <li><a href="index.html">Srpski</a></li>
+            <li><a href="index.html">English</a></li>
+            <li><a href="index.html">Magyar</a></li>
+          </ul>
+      </nav>
+    <div>
+        <label id="dark-change"></label>
+    </div>
+    <div class="nav2">
+        <div class="space">
+            <div class="micon" onclick="toggleMenu()">&#9776;</div>
+            <ul class="menu">
+                <li><a href="index.html"><span class="upper">o nama</span><br><span class="lower">vizija za uspeh</span></a></li>
+                <li><a href="index.html"><span class="upper">dvg proizvodi</span><br><span class="lower">naši proizvodi</span></a></li>
+                <li><a href="index.html"><span class="upper">brendovi</span><br><span class="lower">koje zasupamo</span></a></li>
+                <li><a href="index.html"><span class="upper">distribucija</span><br><span class="lower">logistika i operativa</span></a></li>
+                <li><a href="index.html"><span class="upper">saradnja</span><br><span class="lower">proširenje ponude</span></a></li>
+                <li><a href="index.html"><span class="upper">novosti</span><br><span class="lower">aktuelnosti</span></a></li>
+                <li><a href="index.html"><span class="upper">kontakt</span><br><span class="lower">kontaktirajte nas</span></a></li>
+            </ul>
+        </div>
+        <ul class="nmenu">
+            <li><a href="index.html"><span class="upper">o nama</span><br><span class="lower">vizija za uspeh</span></a></li>
+            <li><a href="index.html"><span class="upper">dvg proizvodi</span><br><span class="lower">naši proizvodi</span></a></li>
+            <li><a href="index.html"><span class="upper">brendovi</span><br><span class="lower">koje zasupamo</span></a></li>
+            <li><a href="index.html"><span class="upper">distribucija</span><br><span class="lower">logistika i operativa</span></a></li>
+            <li><a href="index.html"><span class="upper">saradnja</span><br><span class="lower">proširenje ponude</span></a></li>
+            <li><a href="index.html"><span class="upper">novosti</span><br><span class="lower">aktuelnosti</span></a></li>
+            <li><a href="index.html"><span class="upper">kontakt</span><br><span class="lower">kontaktirajte nas</span></a></li>
         </ul>
+    </div>
     </nav>
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -149,7 +150,7 @@
     </div>
     <div class="silver">
         <h2>Naši proizvodi</h2>
-        <img src="/img/Rectangle3.png" alt="grect">
+        <img class="line" src="/img/Rectangle3.png" alt="grect">
         <h4>Naše proizvode DVG Cosmetics odlikuje visok kvalitet kojim se dobija kompletna<br>
             nega lica I tela. Uspeli smo da uskladimo kvalitet i cenu, što su prepoznali i našI<br>
             kupci.
@@ -239,28 +240,6 @@
             <button type="button">Svi brendovi u našem portfoliju</button>
         </div>
     </div>
-
-
-
-    <div>
-        <label id="dark-change"></label>
-    </div>
-    <script>
-        var darkMode = document.getElementById('dark-change');
-        darkMode.addEventListener('click', function(){
-            document.body.classList.toggle('night');
-            darkMode.classList.toggle('active');
-            document.querySelector('.nav1', '.nav2', '.container-5', '.column-white', '.oprema-text', '.ct-6-text', '.ct-5-text').classList.toggle('night');
-        })
-    </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="swiper.js"></script>
-
-
     <div class="popup" id="popup">
         <div class="popup-content">
             <span class="close" id="close-popup">&times;</span>
@@ -269,24 +248,6 @@
             <button id="popup-button">Close</button>
         </div>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
-                document.getElementById('popup').style.display = 'block';
-                document.body.style.overflow = 'hidden';
-            }, 5000);
-            document.getElementById('close-popup').addEventListener('click', function() {
-                document.getElementById('popup').style.display = 'none';
-                document.body.style.overflow = 'auto';
-            });
-            document.getElementById('popup-button').addEventListener('click', function() {
-                document.getElementById('popup').style.display = 'none';
-                document.body.style.overflow = 'auto';
-            });
-        });
-    </script>
-
     <div class="footer">
         <footer>
             <div class="footer-section logo">
@@ -334,6 +295,12 @@
             </div>
         </div>
     </div>
-    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/scripts/swiper.js"></script>
+    <script src="/scripts/popup.js"></script>
+    <script src="/scripts/darkmode.js"></script>
+    <script src="/scripts/parallax.js"></script>
+    <script src="/scripts/hamburger.js"></script>
 </body>
 </html>

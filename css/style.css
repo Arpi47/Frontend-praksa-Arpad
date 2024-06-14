@@ -1,6 +1,6 @@
 body {
   padding: 0px;
-  margin: 0px;
+  margin: 0 auto;
 }
 
 body.night {
@@ -9,31 +9,30 @@ body.night {
 }
 
 nav {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  top: 0;
+  margin: 0 auto;
 }
 
 .nav1 {
   background-color: #D9D9D9;
+  position: relative;
 }
 .nav1 ul {
   list-style: none;
-  margin: 0;
   display: flex;
-  float: left;
   flex-wrap: wrap;
   text-wrap: revert;
-  padding-left: 105px;
-  padding-right: 105px;
+  padding: 0 105px;
+  margin: 0;
 }
 .nav1 ul li {
   list-style-type: none;
   display: inline-block;
-  padding: 10px 20px;
+  padding-right: 16px;
 }
 .nav1 ul li a {
   color: #595959;
@@ -53,46 +52,130 @@ nav {
   transition: 0.3s;
   text-decoration: none;
 }
+.nav1 .norm {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  text-wrap: revert;
+  padding: 0 105px;
+  margin: 0;
+}
+.nav1 .norm li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 16px;
+}
+.nav1 .norm li a {
+  color: #595959;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  text-decoration-line: underline;
+}
+.nav1 .norm li a:active {
+  color: #888787;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.nav1 .norm li a:hover {
+  color: #888787;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.nav1 .menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  right: 120px;
+  top: 18px;
+  z-index: 999;
+}
+.nav1 .language-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #dddddd;
+  position: absolute;
+  top: 70px;
+  right: 60px;
+  z-index: 998;
+  width: auto;
+  max-width: 100%;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 0 50px 0 50px;
+}
+.nav1 .language-menu li {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(136, 135, 135, 0.4);
+}
+.nav1 .language-menu li:last-child {
+  border-bottom: none;
+}
+.nav1 .language-menu.open {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .nav1 .menu-icon {
+    display: none;
+  }
+  .nav1 .language-menu {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .nav1 .menu-icon {
+    display: block;
+  }
+  .nav1 .language-menu {
+    display: none;
+  }
+  .nav1 .norm {
+    display: none;
+  }
+}
 
 body.night .nav1 {
   background-color: #353232;
   color: #fff;
 }
 body.night .nav1 a {
-  color: #aaaaaa;
+  color: #ffffff;
+}
+body.night .nav1 .language-menu {
+  background-color: #505050;
+  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.1);
 }
 
 .nav2 {
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
 }
 .nav2 ul {
   list-style: none;
-  margin: 0;
-  flex-wrap: wrap;
   text-wrap: revert;
-  align-items: center;
   text-align: center;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-right: 105px;
-  margin-left: 105px;
+  padding: 12px 0 12px 0;
+  margin: 0;
 }
 .nav2 ul li {
   list-style-type: none;
   display: inline-block;
-  padding-left: 42px;
-  padding-right: 42px;
+  padding: 0 42px 0 42px;
   position: relative;
 }
 .nav2 ul li:first-child::before {
   content: "";
   position: absolute;
-  left: -21px;
-  top: -11px;
-  height: 160%;
+  left: -5px;
+  top: -12px;
+  height: 62px;
   width: 1px;
   background-color: rgba(136, 135, 135, 0.4);
 }
@@ -100,8 +183,8 @@ body.night .nav1 a {
   content: "";
   position: absolute;
   right: 0;
-  top: -11px;
-  height: 160%;
+  top: -12px;
+  height: 62px;
   width: 1px;
   background-color: rgba(136, 135, 135, 0.4);
 }
@@ -146,19 +229,92 @@ body.night .nav1 a {
   text-transform: lowercase;
   display: inline-block;
 }
+.nav2 .micon {
+  display: none;
+  font-size: 50px;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  z-index: 999;
+}
+.nav2 .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #dddddd;
+  position: absolute;
+  top: 90px;
+  left: 50px;
+  z-index: 998;
+  width: auto;
+  max-width: 100%;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 0 42px 0 42px;
+}
+.nav2 .menu li {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(136, 135, 135, 0.4);
+}
+.nav2 .menu li:last-child {
+  border-bottom: none;
+}
+.nav2 .menu.open {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .nav2 .micon {
+    display: none;
+  }
+  .nav2 .menu {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .nav2 .space {
+    width: 100%;
+    padding-top: 70px;
+  }
+  .nav2 .micon {
+    display: block;
+  }
+  .nav2 .menu {
+    display: none;
+  }
+  .nav2 .nmenu {
+    display: none;
+  }
+  .nav2 li::after {
+    display: none;
+  }
+  .nav2 li::before {
+    display: none;
+  }
+}
 
 body.night .nav2 {
   background-color: #000;
   color: #fff;
 }
-body.night .nav2 a .upper {
-  color: #888888;
+body.night .nav2 .upper {
+  color: #fff;
+}
+body.night .nav2 .lower {
+  color: #b7b7b7;
+}
+body.night .nav2 .menu {
+  background-color: #505050;
+  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.1);
 }
 
 .swiper {
-  width: 100%;
-  max-height: 705px;
+  max-width: 100%;
+  padding: 352px 0 353px 0;
   position: relative;
+  margin: 0 auto;
 }
 .swiper .sat {
   position: absolute;
@@ -218,16 +374,14 @@ body.night .nav2 a .upper {
 }
 
 .logo {
-  margin-top: 17px;
-  margin-bottom: 14px;
+  padding: 17px 16px 14px 16px;
 }
 
 .image {
-  display: flex;
   position: relative;
 }
 .image img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -244,14 +398,12 @@ body.night .nav2 a .upper {
 button {
   background-color: #BF0F0F;
   color: #fff;
-  padding: 0px 16px 0px 16px;
+  padding: 16px;
   font-size: 16px;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   border-radius: 4px;
   border: none;
-  margin: 15px 16px 15px 16px;
-  padding: 16px;
   cursor: pointer;
 }
 
@@ -267,41 +419,37 @@ button:hover {
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 73px;
-  padding-bottom: 70px;
+  padding: 73px 0 70px 0;
   background-color: #F4F4F4;
 }
 .container .rbox, .container .lbox {
-  flex: 1;
   display: flex;
-  flex-direction: column;
   text-align: justify;
 }
 .container .lbox {
   display: inline;
-  align-items: left;
 }
 .container .lbox img {
-  max-width: 710px;
-  max-height: 504px;
+  max-width: 100%;
   height: auto;
 }
 .container .rbox {
   display: inline;
+  padding-left: 55px;
 }
 .container .rbox h1 {
   font-size: 42px;
   font-family: Roboto, sans-serif;
   font-weight: 700;
   color: #303030;
+  margin: 0;
 }
 .container .rbox h1::after {
   content: "";
   width: 137px;
   height: 6px;
   display: block;
-  margin-top: 22px;
-  margin-bottom: 27px;
+  margin: 22px 0 27px 0;
   background-color: #BF0F0F;
 }
 .container .rbox h2 {
@@ -309,6 +457,7 @@ button:hover {
   font-family: Inter, sans-serif;
   color: #474747;
   font-weight: 400;
+  margin: 0;
 }
 .container .rbox h2::after {
   content: "";
@@ -316,8 +465,7 @@ button:hover {
   width: 524px;
   height: 3px;
   background-color: #C4C4C4;
-  margin-top: 37px;
-  margin-bottom: 57px;
+  margin: 37px 0 57px 0;
 }
 .container .rbox h4 {
   font-size: 14px;
@@ -325,6 +473,8 @@ button:hover {
   color: #474747;
   font-weight: 400;
   line-height: 22px;
+  margin: 0;
+  padding-bottom: 80px;
 }
 
 body.night .container {
@@ -346,10 +496,9 @@ body.night .container h4 {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  width: 100%;
-  height: 502px;
-  overflow-y: auto;
+  max-width: 100%;
   position: relative;
+  padding: 251px 0 251px 0;
 }
 .image-container .centered-text {
   position: absolute;
@@ -364,19 +513,14 @@ body.night .container h4 {
   font-family: Roboto, sans-serif;
   text-transform: uppercase;
   background: rgba(49, 56, 64, 0.4705882353);
-  padding-top: 215px;
-  padding-bottom: 215px;
-  padding-left: 600;
-  padding-right: 600;
+  padding: 215px 0 215px 0;
   letter-spacing: 10px;
 }
 
 .container3 {
   display: flex;
   justify-content: center;
-  padding-top: 74px;
-  padding-left: 104px;
-  padding-right: 104px;
+  padding: 74px 104px 0 104px;
   max-width: 100%;
   height: auto;
 }
@@ -384,8 +528,7 @@ body.night .container h4 {
   display: block;
 }
 .container3 .cbox {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px 0 15px;
 }
 .container3 .lbox {
   position: relative;
@@ -407,8 +550,7 @@ body.night .container h4 {
   width: 50px;
   height: 2px;
   background-color: #BF0F0F;
-  margin-top: 11px;
-  margin-bottom: 57px;
+  margin: 11px 0 57px 0;
 }
 
 body.night .container3 {
@@ -422,23 +564,25 @@ body.night .container3 h3 {
 .title {
   position: relative;
   text-align: center;
+  padding-top: 28px;
 }
 .title h1 {
   font-size: 42px;
   font-family: Roboto, sans-serif;
   font-weight: 700;
   color: #303030;
-  margin-bottom: 17px;
+  margin: 0;
+  padding-bottom: 23px;
 }
 .title h2 {
   font-size: 28px;
   font-family: Inter, sans-serif;
   color: #474747;
   font-weight: 400;
-  margin-bottom: 32px;
+  margin: 0;
 }
 .title img {
-  margin-bottom: 93px;
+  padding: 32px 0 93px 0;
 }
 
 body.night .title {
@@ -454,13 +598,11 @@ body.night .title h2 {
 
 .nums {
   width: 100%;
+  max-height: 502px;
   background-image: url(/img/nums.png);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  width: 100%;
-  height: 502px;
-  overflow-y: auto;
   position: relative;
 }
 .nums .h1 {
@@ -474,8 +616,8 @@ body.night .title h2 {
   font-family: Inter, sans-serif;
   font-weight: 900;
   color: #fff;
-  margin-top: 142px;
-  margin-bottom: 3px;
+  padding: 142px 0 3px 0;
+  margin: 0;
 }
 .nums sup {
   font-size: 15px;
@@ -494,15 +636,13 @@ body.night .title h2 {
   font-family: Inter, sans-serif;
   font-weight: 400;
   color: #fff;
-  margin-top: 3px;
-  margin-bottom: 129px;
+  padding: 3px 0 129px 0;
+  margin: 0;
 }
 .nums .container4 {
   display: flex;
   justify-content: center;
-  margin-top: 74px;
-  margin-left: 104px;
-  margin-right: 104px;
+  padding: 0 100px 15px 100px;
 }
 .nums .box4, .nums .box {
   flex: 1;
@@ -527,8 +667,10 @@ body.night .title h2 {
   width: 100%;
   position: relative;
   text-align: center;
-  padding-top: 1px;
-  padding-bottom: 90px;
+  padding: 1px 0 90px 0;
+}
+.silver .line {
+  padding: 60px 0 60px 0;
 }
 .silver .dimage {
   position: absolute;
@@ -541,10 +683,7 @@ body.night .title h2 {
   font-weight: 400;
   color: #474747;
   padding-top: 91px;
-}
-.silver img {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  margin: 0;
 }
 .silver h4 {
   font-size: 14px;
@@ -552,33 +691,30 @@ body.night .title h2 {
   font-weight: 400;
   color: #474747;
   padding-bottom: 60px;
-  margin: 0px;
+  margin: 0;
 }
 .silver .container5 {
   display: flex;
   justify-content: center;
   width: 85%;
   position: relative;
-  margin-left: 7%;
+  padding-left: 8%;
 }
 .silver .box {
   flex: 1;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-left: 8px;
-  margin-right: 8px;
+  padding: 0 8px 0 8px;
   height: auto;
 }
 .silver .box img {
   display: block;
-  padding-top: 0px;
-  padding-bottom: 0px;
 }
 .silver .box .text {
   position: absolute;
-  top: 270px;
-  left: 26px;
+  bottom: 0;
+  padding-left: 25px;
   font-size: 24px;
   font-family: Roboto, sans-serif;
   font-weight: 400;
@@ -592,16 +728,15 @@ body.night .title h2 {
   width: 53px;
   height: 2px;
   background-color: #BF0F0F;
-  margin-top: 11px;
-  margin-bottom: 57px;
+  margin: 11px 0 51px 0;
 }
 .silver .box p {
-  margin: 0px;
+  margin: 0;
 }
 .silver .box .text2 {
   position: absolute;
-  top: 270px;
-  left: 26px;
+  bottom: 0;
+  padding: 0 0 5px 25px;
   font-size: 24px;
   font-family: Roboto, sans-serif;
   font-weight: 400;
@@ -615,8 +750,7 @@ body.night .title h2 {
   width: 53px;
   height: 2px;
   background-color: #BF0F0F;
-  margin-top: 3px;
-  margin-bottom: 57px;
+  margin: 3px 0 27px 0;
 }
 
 body.night .silver {
@@ -634,43 +768,41 @@ body.night .silver h4 {
   width: 100%;
   position: relative;
   text-align: center;
-  margin-bottom: 75px;
+  padding-bottom: 75px;
 }
 .last img {
-  padding-top: 44px;
-  padding-bottom: 37px;
+  padding: 44px 0 12px 0;
 }
 .last h2 {
   font-family: Inter, sans-serif;
   font-weight: 400;
   font-size: 28px;
   color: #474747;
-  margin-top: 83px;
+  padding-top: 83px;
+  margin: 0;
 }
 .last .container6 {
   display: flex;
   justify-content: center;
   width: 80%;
   position: relative;
-  margin-left: 10%;
-  margin-bottom: 75px;
+  padding-left: 10%;
+  padding-bottom: 75px;
 }
 .last .box {
   flex: 1;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-left: 37px;
-  margin-right: 37px;
+  padding: 0 37px 0 37px;
   height: auto;
 }
 .last .box img {
   display: block;
-  padding-top: 0px;
-  padding-bottom: 0px;
 }
 .last .box p {
-  margin-top: 12px;
+  padding-top: 12px;
+  margin: 0;
   font-size: 18px;
   font-family: Inter, sans-serif;
   font-weight: 400;
@@ -711,7 +843,8 @@ body.night .last h2 {
   font-family: Inter, sans-serif;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 3px;
+  padding-bottom: 3px;
+  margin: 0;
 }
 .footer footer p {
   font-size: 14px;
@@ -740,39 +873,29 @@ body.night .last h2 {
   padding: 10px;
   box-sizing: border-box;
 }
-.footer footer .footer-section.logo {
+.footer footer .logo {
   flex: 1;
 }
 .footer footer .footer-section.contact {
   flex: 2;
   border-right: 1px solid #ccc;
   border-left: 1px solid #ccc;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 .footer footer .footer-section.links {
   flex: 2;
   border-right: 1px solid #ccc;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 .footer footer .footer-section.social {
   flex: 1;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-left: 20px;
 }
 .footer footer .footer-section img {
   vertical-align: middle;
-  margin-right: 10px;
 }
 .footer footer .footer-section ul {
   list-style-type: none;
-  padding: 0;
-}
-.footer footer .footer-section ul li {
-  margin: 5px 0;
 }
 .footer .sat2 {
   background: rgba(0, 0, 0, 0.3294117647);
@@ -855,8 +978,7 @@ body.night .last h2 {
   flex-direction: row;
   text-align: center;
   position: relative;
-  padding-left: 252px;
-  padding-right: 25px;
+  padding-left: 0 25px 0 252px;
 }
 .footer .sat2 .fcontainer .box4 p {
   font-size: 14px;
@@ -887,8 +1009,8 @@ label {
   position: absolute;
   width: 45px;
   height: 22px;
-  right: 20px;
-  top: 20px;
+  right: 33px;
+  top: 27px;
   border: 2px solid;
   border-radius: 20px;
   cursor: pointer;
@@ -976,3 +1098,10 @@ body.night .popup h2 {
 body.night .popup p {
   color: #aaaaaa;
 }
+
+/*.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+padding: top; right; bottom; left;  
+*/

@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var swiper = new Swiper(".mySwiper", {
       spaceBetween: 30,
       centeredSlides: true,
+      loop: Infinity,
       autoplay: {
         delay: 2500,
         disableOnInteraction: false
