@@ -1,4 +1,4 @@
-body {
+body, nav, .nav1, .nav2, .vidcontainer,.container, .container3, .container4, .container6, .image-container, .title, .nums, .silver, .last, .footer, .mfooter, .top {
   max-width: 100%;
   margin: 0 auto;
 }
@@ -6,18 +6,16 @@ body.night{
   background-color: #000;
   color: #fff;
 }
-nav{
-  max-width: 100%;
-  margin: 0 auto;
-  height: auto;
+nav, .norm, .language-menu, .nav2, .menu, .container, .lbox, .container3, .container4, .box4, .box, .swiper, .slide, .container6, .mcontainer6, footer, .ftcontainer, .footer-section.social, .box1, .box2, .box3, .fcontainer, .top, .bottom  {
   display: flex;
+}
+nav{
+  height: auto;
   align-items: center;
   justify-content: space-between;
 }
 .nav1 {
   background-color: #D9D9D9;
-  max-width: 100%;
-  margin: 0 auto;
   position: relative;
   ul {
     list-style: none;
@@ -50,14 +48,58 @@ nav{
       }
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 835px) {
     ul {
       padding: 0 20px;
     }
   }
+  @media (max-width: 400px) {
+    .logo {
+      img {
+        width: 200px;
+        height: auto;
+        padding: 2px 0;
+      }
+    }
+  }
+  @media (max-width: 380px) {
+    .logo {
+      img {
+        width: 180px;
+        height: auto;
+        padding: 4px 0;
+      }
+    }
+  }
+  @media (max-width: 360px) {
+    .logo {
+      img {
+        width: 160px;
+        height: auto;
+        padding: 6px 0;
+      }
+    }
+  }
+  @media (max-width: 340px) {
+    .logo {
+      img {
+        width: 140px;
+        height: auto;
+        padding: 8px 0;
+      }
+    }
+  }
+  @media (max-width: 325px) {
+    .logo {
+      img {
+        width: 120px;
+        height: auto;
+        padding: 10px 0;
+      }
+    }
+  }
   .norm {
     list-style: none;
-    display: flex;
     flex-wrap: wrap;
     text-wrap: revert;
     padding: 0 105px;
@@ -96,7 +138,6 @@ nav{
     z-index: 999;
   }
   .language-menu {
-    display: flex;
     flex-direction: column;
     align-items: center;
     background: #dddddd;
@@ -124,7 +165,7 @@ nav{
       z-index: 1000;
     }
   }
-  @media (min-width: 768px) {
+  @media (min-width: 835px) {
     .menu-icon {
       display: none;
     }
@@ -132,7 +173,7 @@ nav{
       display: none;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 835px) {
     .menu-icon {
       display: block;
     }
@@ -145,7 +186,7 @@ nav{
   }
 }
 body.night .nav1 {
-  background-color: #353232;
+  background-color: #636363;
   color: #fff;
   a {
     color: #ffffff;
@@ -156,10 +197,7 @@ body.night .nav1 {
   }
 }
 .nav2{
-  display: flex;
   justify-content: center; 
-  max-width: 100%;
-  margin: 0 auto;
   ul{
     list-style: none;
     text-wrap: revert;
@@ -246,9 +284,11 @@ body.night .nav1 {
     left: 0;
     top: 80px;
     z-index: 999;
+    @media (max-width: 835px) {
+      font-size: 35px;
+    }
   }
   .menu {
-    display: flex;
     flex-direction: column;
     align-items: center;
     background: #dddddd;
@@ -275,7 +315,7 @@ body.night .nav1 {
       display: flex;
     }
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1230px) {
     .micon {
       display: none;
     }
@@ -283,10 +323,16 @@ body.night .nav1 {
       display: none;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1230px) {
     .space {
       width: 100%;
       padding-top: 70px;
+    }
+    @media (max-width: 835px) {
+      .space {
+        width: 100%;
+        padding-top: 50px;
+      }
     }
     .micon {
       display: block;
@@ -321,8 +367,6 @@ body.night .nav2 {
   }
 }
 .vidcontainer {
-  max-width: 100%;
-  margin: 0 auto;
   overflow-y: hidden;
   position: relative;
   height: auto;
@@ -335,92 +379,24 @@ body.night .nav2 {
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
-    z-index: 1000;
-  }
-}
-/*.swiper {
-  max-width: 100%;
-  padding: 352px 0;
-  position: relative;
-  margin: 0 auto;
-  max-height: 705px;
-  .sat {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
   }
-}
-#swiper1 {
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .autoplay-progress {
-    display: none;
-    position: absolute;
-    right: 16px;
-    bottom: 16px;
-    z-index: 10;
-    width: 48px;
-    height: 48px;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: var(--swiper-theme-color);
-  }
-  
-  .autoplay-progress svg {
-    display: none;
-    --progress: 0;
-    position: absolute;
-    left: 0;
-    top: 0px;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    stroke-width: 4px;
-    stroke: var(--swiper-theme-color);
-    fill: none;
-    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-    stroke-dasharray: 125.6;
-    transform: rotate(-90deg);
-  }
-  .logo {
-    padding: 17px 16px 14px 16px;
-  }
-  .image {
-    position: relative;
-    img{
-      max-width: 100%;
-      height: auto;
-      display: block;
+  @media (max-width: 850px) {
+    .fixed {
+      bottom: 35px;
     }
   }
-  .fixed {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    cursor: pointer;
-    z-index: 1000;
+  @media (max-width: 600px) {
+    .fixed {
+      bottom: 20px;
+    }
   }
-}*/
+  @media (max-width: 400px) {
+    .fixed {
+      bottom: 12px;
+    }
+  }
+}
 
 button {
   background-color: #BF0F0F;
@@ -440,26 +416,21 @@ button:hover{
   text-decoration: none;
 }
 .container{
-  max-width: 100%;
-  margin: 0 auto;
   overflow-y: hidden;
   height: auto;
-  display: flex;
   flex-wrap: wrap;
   padding: 73px 0 70px 0;
   background-color: #F4F4F4;
+  margin: 0 auto;
   @media (max-width: 768px) {
-    .lbox, .rbox {
-      max-width: 100%;
-      margin: 0 auto;
-    }
     .rbox {
       padding: 50px 55px 0 0;
+      display: flex
     }
   }
   .rbox, .lbox{
-    display: flex;
     text-align: justify;
+    max-width: 100%;
   }
   .lbox{
     display: inline;
@@ -533,8 +504,6 @@ body.night .container {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  max-width: 100%;
-  margin: 0 auto;
   overflow-y: hidden;
   position: relative;
   padding: 251px 0;
@@ -556,37 +525,49 @@ body.night .container {
     @media (max-width: 622px) {
       padding: 200px 0;
     }
+    @media (max-width: 380px) {
+      font-size: 25px;
+      padding: 220px 0;
+    }
   }
 }
 .container3 {
-  display: flex;
   justify-content: center; 
   padding: 74px 104px 0 104px;
-  max-width: 100%;
-  margin: 0 auto;
+  overflow-x: hidden;
   overflow-y: hidden;
   height: auto;
-  @media (max-width: 768px) {
+  @media (max-width: 1260px) {
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: center;
   }
+  @media (max-width: 610px) {
+    padding: 74px 52px 0 52px;
+  }
   img{
     display: block;
+    @media (max-width: 620px) {
+      max-width: 100%;
+    }
   }
   .cbox {
     padding: 0 15px;
+    @media (max-width: 1009px) {
+      padding: 0;
+    }
   }
-  .lbox {
-    position: relative;
+  .rbox {
+    margin: 0;
     .cover{
       position: absolute;
       bottom: 117px;
     }
     @media (max-width: 768px) {
       .cover {
-        bottom: 55px;
+        display: none;
       }
     }
   }
@@ -617,8 +598,6 @@ body.night .container3 {
   position: relative;
   text-align: center; 
   padding-top: 28px;
-  max-width: 100%;
-  margin: 0 auto;
   overflow-y: hidden;
   h1{
     font-size: 42px;
@@ -650,8 +629,6 @@ body.night .title {
   }
 }
 .nums {
-  max-width: 100%;
-  margin: 0 auto;
   overflow-y: hidden;
   max-height: 502px;
   background-image: url(/img/nums.png);
@@ -662,7 +639,7 @@ body.night .title {
   @media (max-width: 768px) {
     max-height: 100%;
     .container4 {
-      flex-wrap: wrap;
+      flex-direction: column;
     }
     .box,.box4 {
       padding: 0 20px;
@@ -709,13 +686,16 @@ body.night .title {
     margin: 0;
   }
   .container4 {
-    display: flex;
     justify-content: center; 
     padding: 0 100px 15px 100px;
+    @media (max-width: 430px) {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 50px;
+    }
   }
   .box4, .box {
     flex: 1;
-    display: flex;
     flex-direction: column;
     text-align: center;
     position: relative;
@@ -733,8 +713,7 @@ body.night .title {
 .silver {
   background-color: #F4F4F4;
   background-size: cover;
-  max-width: 100%;
-  margin: 0 auto;
+  overflow-x: hidden;
   overflow-y: hidden;
   position: relative;
   text-align: center;
@@ -742,10 +721,23 @@ body.night .title {
   .line {
     padding: 60px 0;
   }
+  @media (max-width: 660px) {
+    .line {
+      width: 300px;
+      height: 3px;
+    }
+  }
+  @media (max-width: 330px) {
+    .line {
+      width: 250px;
+      height: 3px;
+    }
+  }
   .dimage {
     position: absolute;
     left: 6px;
     bottom: -28px;
+    overflow-x: hidden;
   }
   h2 {
     font-size: 28px;
@@ -764,75 +756,16 @@ body.night .title {
     margin: 0;
   }
   .swiper {
-    display: flex;
     justify-content: center; 
+    overflow-x: hidden;
     max-width: 100%;
     margin: 0 109px;
-    @media (max-width: 768px) {
+    @media (max-width: 460px) {
       margin: 0 auto;
-      .swiper-button-prev,.swiper-button-next {
-        display: hide;
-      }
     }
-  }
-  .swiper-button-prev {
-    position: absolute;
-    left: -2px;
-    @media (max-width: 768px) {
-      display: none;
-    }
-  }
-  .swiper-button-next {
-    position: absolute;
-    right: 2px;
-    @media (max-width: 768px) {
-      display: none;
-    }
-  }
-  .text{
-    position: absolute;
-    bottom: 0;
-    padding-left: 25px;
-    font-size: 24px;
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: left;
-    color: #474747;
-  }
-  .text::after {
-    content: "";
-    display: block;
-    width: 53px;
-    height: 2px;
-    background-color: #BF0F0F;
-    margin: 11px 0 51px 0;
-  }
-  p{
-    margin: 0;
-  }
-  .text2{
-    position: absolute;
-    bottom: 0;
-    padding: 0 0 5px 25px;
-    font-size: 24px;
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: left;
-    color: #474747;
-  }
-  .text2::after {
-    content: "";
-    display: block;
-    width: 53px;
-    height: 2px;
-    background-color: #BF0F0F;
-    margin: 3px 0 27px 0;
   }
   .slide {
     flex: 1;
-    display: flex;
     flex-direction: column;
     position: relative;
     padding: 0 8px;
@@ -853,13 +786,24 @@ body.night .silver {
 }
 .last {
   background-size: cover;
-  max-width: 100%;
-  margin: 0 auto;
+  overflow-x: hidden;
   overflow-y: hidden;
   position: relative;
   text-align: center;
   padding-bottom: 75px;
-  img {
+  @media (max-width: 660px) {
+    .line2 {
+      width: 300px;
+      height: 3px;
+    }
+  }
+  @media (max-width: 330px) {
+    .line2 {
+      width: 250px;
+      height: 3px;
+    }
+  }
+  .line2 {
     padding: 44px 0 12px 0;
   }
   h2 {
@@ -871,39 +815,65 @@ body.night .silver {
     margin: 0;
   }
   .container6 {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: center; 
     max-width: 100%;
     position: relative;
     margin: 0 190px;
     padding-bottom: 75px;
     @media (max-width: 768px) {
-      flex-wrap: wrap;
-      img {
-        display: flex;
+      display: none;
+    }
+    .box {
+      flex: 1;
+      flex-direction: column;
+      position: relative;
+      padding: 0 37px;
+      height: auto;
+      img{
+        display: block;
+      }
+      p{
+        padding-top: 12px;
+        margin: 0;
+        font-size: 18px;
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        text-align: center;
+        color: 474747;
       }
     }
   }
-  .box {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  .mcontainer6 {
+    flex-wrap: wrap;
+    justify-content: center; 
+    max-width: 100%;
     position: relative;
-    padding: 0 37px;
-    height: auto;
-    img{
-      display: block;
+    margin: 0 auto;
+    padding-bottom: 75px;
+    @media (min-width: 768px) {
+      display: none;
     }
-    p{
-      padding-top: 12px;
-      margin: 0;
-      font-size: 18px;
-      font-family: Inter, sans-serif;
-      font-weight: 400;
-      text-align: center;
-      color: 474747;
+    .box {
+      flex: 1;
+      flex-direction: column;
+      position: relative;
+      padding: 0 37px;
+      height: auto;
+      img{
+        display: block;
+      }
+      p{
+        padding-top: 12px;
+        margin: 0;
+        font-size: 18px;
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        text-align: center;
+        color: 474747;
+      }
     }
-  }  
+  }
 }
 body.night .last {
   background-color: #000;
@@ -1006,23 +976,20 @@ label.active:before {
   left: 24px;
   background: #fff;
 }
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .footer {
     display: none;
   }
 }
 .footer {
-  max-width: 100%;
   background-image: url(/img/footer.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin: 0 auto;
   footer {
-    display: flex;
     padding: 86px 215px;
     background-color: #393D4399;
-    min-height: 383px;
+    max-height: 300px;
     .logof {
       position: absolute;
       left: 214px;
@@ -1062,7 +1029,7 @@ label.active:before {
       padding: 0 20px;
       box-sizing: border-box;
     }
-    .logo {
+    .flogo {
       flex: 1;
     }
     .footer-section.contact {
@@ -1070,7 +1037,6 @@ label.active:before {
       border-right: 1px solid #FFFFFF42;
       border-left: 1px solid #FFFFFF42;
       .ftcontainer {
-        display: flex;
         .left {
           flex: 1;
         }
@@ -1094,7 +1060,6 @@ label.active:before {
     }
     .footer-section.social {
       flex: 1;
-      display: flex;
       justify-content: space-around;
       align-items: center;
 
@@ -1109,12 +1074,10 @@ label.active:before {
   .sat2 {
     background: #00000054;
     .fcontainer {
-      display: flex;
       justify-content: center; 
       align-items: center;
       .box1 {
         flex: 1;
-        display: flex;
         flex-direction: column;
         text-align: center;
         position: relative;
@@ -1129,7 +1092,6 @@ label.active:before {
       }
       .box2 {
         flex: 1;
-        display: flex;
         flex-direction: column;
         text-align: center;
         position: relative;
@@ -1155,7 +1117,6 @@ label.active:before {
       }
       .box3 {
         flex: 1;
-        display: flex;
         flex-direction: column;
         text-align: center;
         position: relative;
@@ -1181,7 +1142,6 @@ label.active:before {
       }
       .box4 {
         flex: 1;
-        display: flex;
         flex-direction: row;
         text-align: center;
         position: relative;
@@ -1214,14 +1174,12 @@ label.active:before {
     }
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1100px) {
   .mfooter {
     display: none;
   }
 }
 .mfooter {
-  max-width: 100%;
-  margin: 0 auto;
   overflow-y: hidden;
   background: #151515;
   .fcontainer {
@@ -1229,17 +1187,10 @@ label.active:before {
     justify-content: center; 
     align-items: center;
     .top {
-      display: flex;
       padding: 20px;
-      max-width: 100%;
-      margin: 0 auto;
-    }
-    .bottom {
-      display: flex;
     }
     .box1 {
       flex: 1;
-      display: flex;
       flex-direction: column;
       text-align: center;
       position: relative;
