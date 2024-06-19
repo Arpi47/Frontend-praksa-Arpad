@@ -422,7 +422,7 @@ button:hover{
   padding: 73px 0 70px 0;
   background-color: #F4F4F4;
   margin: 0 auto;
-  @media (max-width: 768px) {
+  @media (max-width: 1300px) {
     .rbox {
       padding: 50px 55px 0 0;
       display: flex
@@ -540,6 +540,7 @@ body.night .container {
   @media (max-width: 1260px) {
     max-width: 100%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: center;
@@ -553,14 +554,27 @@ body.night .container {
       max-width: 100%;
     }
   }
+  .lbox {
+    display: block;
+    @media (max-width: 1260px) {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
   .cbox {
     padding: 0 15px;
-    @media (max-width: 1009px) {
+    @media (max-width: 1260px) {
+      max-width: 100%;
+      margin: 0 auto;
       padding: 0;
     }
   }
   .rbox {
     margin: 0;
+    @media (max-width: 1260px) {
+      max-width: 100%;
+      margin: 0 auto;
+    }
     .cover{
       position: absolute;
       bottom: 117px;
