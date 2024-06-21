@@ -6,7 +6,7 @@ body.night{
   background-color: #000;
   color: #fff;
 }
-nav, .norm, .language-menu, .nav2, .menu, .container, .lbox, .container3, .mcontainer3, .container4, .box4, .box, .swiper, .slide, .container6, .mcontainer6, footer, .ftcontainer, .footer-section.social, .box1, .box2, .box3, .fcontainer, .top, .bottom  {
+nav, .norm, .language-menu, .nav2, .menu, .container, .lbox, .container3, .mcontainer3, .container4, .box4, .box, .swiper1, .slide, .container6, .mcontainer6, footer, .ftcontainer, .footer-section.social, .box1, .box2, .box3, .fcontainer, .top, .bottom  {
   display: flex;
 }
 nav{
@@ -375,9 +375,11 @@ body.night .nav2 {
   }
   .fixed {
     position: absolute;
+    background-color: #00000070;
+    width: 100%;
     bottom: 50px;
     left: 50%;
-    transform: translateX(-50%);
+    padding: 215px 0;
     cursor: pointer;
     z-index: 1;
   }
@@ -397,6 +399,64 @@ body.night .nav2 {
     }
   }
 }
+.mySwiper {
+  position: relative;
+  width: 100%;
+  max-height: 705px;
+  overflow: hidden;
+
+  .swiper-wrapper {
+      height: 100%;
+  }
+
+  .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+  }
+
+  .swiper-slide img {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+  }
+
+  .fixed {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 10px 50px 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 10;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      height: 100%; 
+  }
+
+  .fixed a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  svg {
+      width: 58px;
+      height: 57px;
+      fill: none;
+      stroke: #f2f2f2;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+  }
+}
+
 
 button {
   background-color: #BF0F0F;
@@ -409,12 +469,14 @@ button {
   border: none;
   cursor: pointer;
 }
-button:hover{
+
+button:hover {
   background-color: #474747;
   color: #ffffff;
   transition: .3s;
   text-decoration: none;
 }
+
 .container{
   overflow-y: hidden;
   height: auto;
@@ -423,6 +485,7 @@ button:hover{
   background-color: #F4F4F4;
   margin: 0 auto;
   @media (max-width: 1300px) {
+    padding-top: 50px;
     .rbox {
       padding: 50px 55px 0 0;
       display: flex
@@ -807,7 +870,7 @@ body.night .title {
       padding: 0 20px 60px 20px;
     }
   }
-  .swiper {
+  .swiper2 {
     justify-content: center; 
     overflow-x: hidden;
     max-width: 100%;

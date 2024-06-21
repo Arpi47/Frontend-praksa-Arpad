@@ -44,7 +44,25 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.remove('no-scroll');
     });
 });
-const swiper = new Swiper('.swiper', {
+var swiper1 = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  loop: Infinity,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+const swiper2 = new Swiper('.swiper', {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 30,

@@ -8,7 +8,7 @@ body.night {
   color: #fff;
 }
 
-nav, .norm, .language-menu, .nav2, .menu, .container, .lbox, .container3, .mcontainer3, .container4, .box4, .box, .swiper, .slide, .container6, .mcontainer6, footer, .ftcontainer, .footer-section.social, .box1, .box2, .box3, .fcontainer, .top, .bottom {
+nav, .norm, .language-menu, .nav2, .menu, .container, .lbox, .container3, .mcontainer3, .container4, .box4, .box, .swiper1, .slide, .container6, .mcontainer6, footer, .ftcontainer, .footer-section.social, .box1, .box2, .box3, .fcontainer, .top, .bottom {
   display: flex;
 }
 
@@ -369,9 +369,11 @@ body.night .nav2 .menu {
 }
 .vidcontainer .fixed {
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.4392156863);
+  width: 100%;
   bottom: 50px;
   left: 50%;
-  transform: translateX(-50%);
+  padding: 215px 0;
   cursor: pointer;
   z-index: 1;
 }
@@ -389,6 +391,58 @@ body.night .nav2 .menu {
   .vidcontainer .fixed {
     bottom: 12px;
   }
+}
+
+.mySwiper {
+  position: relative;
+  width: 100%;
+  max-height: 705px;
+  overflow: hidden;
+}
+.mySwiper .swiper-wrapper {
+  height: 100%;
+}
+.mySwiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.mySwiper .swiper-slide img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+.mySwiper .fixed {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 10px 50px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+.mySwiper .fixed a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mySwiper svg {
+  width: 58px;
+  height: 57px;
+  fill: none;
+  stroke: #f2f2f2;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 button {
@@ -419,6 +473,9 @@ button:hover {
   margin: 0 auto;
 }
 @media (max-width: 1300px) {
+  .container {
+    padding-top: 50px;
+  }
   .container .rbox {
     padding: 50px 55px 0 0;
     display: flex;
@@ -837,14 +894,14 @@ body.night .title h2 {
     padding: 0 20px 60px 20px;
   }
 }
-.silver .swiper {
+.silver .swiper2 {
   justify-content: center;
   overflow-x: hidden;
   max-width: 100%;
   margin: 0 109px;
 }
 @media (max-width: 460px) {
-  .silver .swiper {
+  .silver .swiper2 {
     margin: 0 auto;
   }
 }
